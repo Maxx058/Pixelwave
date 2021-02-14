@@ -189,6 +189,8 @@ p {
 }
 
 .LandingInfoAndImage .landingSVG {
+  position: relative;
+  top: -4em;
   width: 100%;
 }
 
