@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>PixelWave Studios</title>
   <script src="/style.ff1c4cab.js"></script></head>
   <body>
@@ -58,39 +59,38 @@
             </span>
             <br><br>
             Need your own website, but cannot decide how it should look ? Do not
-            worry anymore, our highly talented UI designers and the miraculously
-            wonderful Front End Developer will get your website the perfect
-            look. Be it a static design or an animated work, our designers will
-            work interactively with you so that we make sure you can get the
-            dream look you have been longing for.
+            worry anymore, our team will get your website the perfect look. Be
+            it a static design or an animated work, our designers will work
+            interactively with you so that we make sure you can get the dream
+            look you have been longing for.
           </p>
           <img class="landingSVG" src="/landingSVG.d29fd7a5.svg" alt="SVG">
         </section>
       </section>
-      <section class="aboutSection" id="about">
+      <section class="aboutSection" id="about" data-aos="fade-up">
         <h3 class="aboutHeader">Who are we?</h3>
         <section class="aboutGrid">
           <img class="gridSVG" src="/whoAreWe.7fcb425f.svg" alt="SVG">
           <div class="innerGridAbout">
             <p>
-              We are a team of UI/UX designers who make simple and beautiful
-              looking content. We believe that each design should be unique and
-              different in its own way, so that each and every of our customers
-              can have a perfect looking website at the very affordable rates.
+              We are a team of UI/UX designers who make simple and elegant
+              looking content. We believe that each design should be unique in
+              its own way, so that each of our clients can have a perfect
+              looking website at the very affordable rates.
             </p>
           </div>
         </section>
       </section>
-      <section class="aboutSection">
+      <section class="aboutSection" data-aos="fade-up">
         <h3 class="aboutHeader">What we do ?</h3>
         <section class="aboutGrid">
           <img class="gridSVG whatWeDoSVG" src="/whatWeDo.44b3a1dc.svg" alt="SVG">
           <div class="innerGridAbout">
             <p>
-              We at PixelWave&copy; work interactively with our customers so
-              that we get to know what our customer truly wants and we also make
-              sure that we give them the perfect design they are looking for. We
-              study each and every detail that we get from the customer and
+              We at PixelWave&copy; work interactively with our clients so that
+              we get to know what our client truly wants and we also make sure
+              that we give them the perfect design they are looking for. We
+              study each and every detail that we get from the client and
               carefully align the dots to make their design look simply
               stunning.
             </p>
@@ -114,6 +114,7 @@
     </div>
     <div id="bottom"></div>
     <script src="/Main.ca178117.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>var toggler = document.querySelectorAll(".toggleSwitch");
 var html = document.querySelector("html");
 
@@ -122,6 +123,11 @@ function toggleClass() {
   toggler.forEach(function (item) {
     item.classList.toggle("darkToggled");
   });
-}</script>
+}
+
+AOS.init({
+  duration: 1000,
+  offset: 120
+});</script>
   </body>
 </html>
