@@ -1,0 +1,431 @@
+/* Preloader */
+#preloader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+  background-color: #28a8df;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#preloader span img {
+  animation: primary 1s ease infinite alternate;
+}
+
+#preloader span h3 {
+  margin: 3em 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#preloader.preloadFinished {
+  opacity: 0;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-align: justify;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 2%;
+  right: 1%;
+  background: #643893;
+  font-size: 1em;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  z-index: 10;
+}
+
+.toTop a {
+  color: #fff;
+}
+
+#bottom {
+  padding: 6em;
+}
+
+/* Top Section */
+.top {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 1em 0;
+  display: flex;
+}
+
+.topNav {
+  position: relative;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.topLogo {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.topUl {
+  list-style: none;
+  display: flex;
+}
+
+.topUl li {
+  letter-spacing: 1.5px;
+  margin: 0 2em;
+}
+
+.topUl li a {
+  color: #5b5ea9;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.topUl li a:hover {
+  border-bottom: 2px solid #5b5ea9;
+}
+
+.burger {
+  display: none;
+}
+
+.toggleSwitch {
+  height: 40px;
+  width: 80px;
+  border: 2px solid #5b5ea9;
+  padding: 3px;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.toggleSwitch .circle {
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #5b5ea9;
+  transition: 0.3s ease-in-out;
+}
+
+.darkToggled .circle {
+  margin-left: 40px;
+}
+
+.burger div {
+  background: #5b5ea9;
+  margin: 5px 0;
+  height: 2px;
+  width: 25px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px);
+}
+
+.burger.active div:nth-child(2) {
+  display: none;
+}
+
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(4px);
+}
+
+/* Landing Section */
+.landing {
+  position: relative;
+  margin: auto;
+  max-width: 80%;
+}
+
+.LandingInfoAndImage {
+  position: relative;
+  top: 3em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.LandingInfoAndImage p {
+  width: 80%;
+  font-size: 1em;
+  font-weight: 600;
+  color: #5b5ea9;
+}
+
+.LandingInfoAndImage p .h3 {
+  text-align: left !important;
+  font-size: 2em;
+  background: linear-gradient(45deg, #643893 21%, #586bb2 54%, #28a8df 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LandingInfoAndImage .landingSVG {
+  width: 100%;
+}
+
+/* About Section */
+.aboutSection {
+  position: relative;
+  top: 3em;
+}
+
+.aboutSection .aboutHeader {
+  font-size: 2em;
+  color: #28a8df;
+  text-align: center;
+  padding: 2em;
+}
+
+.aboutGrid {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.aboutGrid .innerGridAbout {
+  margin: 0 4em;
+  height: auto;
+}
+
+.aboutGrid p {
+  font-weight: 600;
+  color: #5b5ea9;
+  width: 100%;
+}
+
+.gridSVG {
+  height: 50vh;
+  width: 100%;
+}
+
+/* What We Do Section */
+.whatWeDoSVG {
+  order: 2;
+}
+
+/* Samples Section */
+.sampleDiv {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.sampleGrid img {
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.sampleGrid img:hover {
+  transform: scale(1.1);
+}
+
+.sampleDiv .andMore {
+  position: absolute;
+  right: 0;
+  padding: 2em 0;
+}
+
+.andMore a {
+  border-bottom: 2px solid #28a8df;
+  color: #28a8df;
+}
+
+.sampleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.sampleGrid img {
+  border-radius: 5px;
+}
+
+/* Extra Adjustments */
+.mobileUL {
+  transition: 0.3s ease-in-out;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 21;
+  height: 105vh;
+  width: 0;
+  overflow: hidden;
+}
+
+.mobileUL.triggered {
+  transition: 0.3s ease-in-out;
+  width: 70%;
+}
+
+.sideUl {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 2em;
+  row-gap: 2em;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sideUl li a {
+  font-size: 1.2em;
+  color: #5b5ea9;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .LandingInfoAndImage p,
+.aboutGrid p {
+    font-weight: 500;
+  }
+
+  .toggleSwitch {
+    display: none;
+  }
+
+  .toggleSwitchMobile {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .topUl {
+    display: none;
+  }
+
+  .mobileUL {
+    display: flex;
+  }
+
+  .LandingInfoAndImage {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1em;
+  }
+
+  .LandingInfoAndImage p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .LandingInfoAndImage p .h3 {
+    font-size: 1.7em;
+    font-weight: 600 !important;
+  }
+
+  .LandingInfoAndImage img {
+    margin-top: 2em;
+    animation: normal;
+  }
+
+  .aboutGrid {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .aboutGrid img {
+    align-self: center;
+    width: 85%;
+  }
+
+  .sampleGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sampleGrid img {
+    margin-bottom: 2em;
+  }
+}
+/* HTML DARK MODE */
+html.html-dark,
+html.html-dark .mobileUL {
+  background-color: black;
+}
+
+html.html-dark .toTop,
+html.html-dark .burger div,
+html.html-dark .toggleSwitch .circle {
+  background-color: #28a8df;
+}
+
+html.html-dark .toggleSwitch {
+  border: 2px solid #28a8df;
+}
+
+html.html-dark .aboutGrid p,
+html.html-dark .LandingInfoAndImage p {
+  color: #eee;
+}
+
+html.html-dark .LandingInfoAndImage p .h3 {
+  background: #28a8df;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.html-dark .mobileUL li a,
+html.html-dark .topUl li a {
+  color: #28a8df;
+}
+
+html.html-dark .topUl li a:hover {
+  border-bottom: 3px solid #28a8df;
+}
+
+/* Animations */
+.aboutGrid img:hover,
+.landingSVG:hover {
+  animation: dance 0.3s infinite alternate;
+}
+
+@keyframes dance {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/*# sourceMappingURL=/style.ff1c4cab.css.map */
